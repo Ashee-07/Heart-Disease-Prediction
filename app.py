@@ -30,7 +30,7 @@ def home():
             predict_pipeline = PredictPipeline()
             pred = predict_pipeline.predict(final_data)
             result = round(pred[0], 2)
-            return render_template("result.html", final_result=result)
+            return render_template("result.html", final_result=result, input_data=request.form)
 
         except Exception as e:
             # Handle exceptions gracefully

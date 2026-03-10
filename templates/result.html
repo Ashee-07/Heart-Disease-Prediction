@@ -3,7 +3,19 @@
     {% if final_result == 0 %}
         <center><h1><p>No heart disease detected</p></h1></center>
     {% else %}
-        <center><h1><p>Suffering from heart disease</p></h1></center>
+        <center><h1><p>Yes, Heart Disease Predicted</p></h1></center>
     {% endif %}
+
+    <div style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 8px;">
+        <h3>Your Input Data:</h3>
+        <table style="width: 100%; text-align: left; margin-top: 10px;">
+            {% for key, value in input_data.items() %}
+            <tr>
+                <td style="padding: 5px; font-weight: bold; text-transform: capitalize;">{{ key }}</td>
+                <td style="padding: 5px;">{{ value }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
 </div>
 {% endif %}
