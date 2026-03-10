@@ -41,6 +41,10 @@ def home():
         # Render the initial page
         return render_template("index.html")
 
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
+
 # Execution begins
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
